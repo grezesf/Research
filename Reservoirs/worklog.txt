@@ -1,0 +1,9 @@
+03 - November - 2013
+    Moved the work to new github
+    Tested out OGER tests
+        need to fix mdp and OGER library issues
+
+    Tested out preprocessing scripts
+        connections to cats machines unstable
+        feat_extract.py works
+        

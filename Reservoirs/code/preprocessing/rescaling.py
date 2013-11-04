@@ -3,13 +3,17 @@ import os
 import sys
 import math
 
+# README
+# attempt to recreate table 1 from the paper
+# reads the TIMIT-mfcc dataset, performs statistical calculation
+
 
 def main():
 
 	# path to MFCCs
-	MFCCPath = sys.argv[1]
+	MFCCPath = os.path.abspath(os.path.normpath(sys.argv[1]))
 	# path to save results
-	targetDir = sys.argv[2]
+	targetDir = os.path.abspath(os.path.normpath(sys.argv[2]))
 
 	# create it if it doesnt exist
 	if not os.path.exists(targetDir):
@@ -40,13 +44,11 @@ def main():
 	# print nbFiles
 
 
-
-
 	# walk the directories
 	for (path, dirs, files) in os.walk(MFCCPath):
 		for file in files:
 			# look only at train files (of mfccs of course)
-			# skip the SA files
+			# skip the SA files (as in paper)
 			if ".mfcc" in file  and "sa" not in file and "/train/" in path:
 			# if ".mfcc" in file  and "sa" not in file:
 
@@ -69,10 +71,10 @@ def main():
 					averages[4] += sum( map( float , line.split(";")[15:26] ))
 					averages[5] += sum( map( float , line.split(";")[28:39] ))
 
-
 				f.close()
 
 	# compute averages
+	# print nbFrames
 	averages = [x/nbFrames for x in averages]
 	averages[3:] = [x/12 for x in averages[3:]]
 

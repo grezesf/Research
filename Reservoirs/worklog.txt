@@ -1,3 +1,10 @@
+18 - November - 2013
+    mdp library installed on cougar
+    PYTHONPATH finally edited for OGER library import
+    still can get test/grammar_task.py to run?
+    added description on feat_extract.py
+    remakeMFCCs.py fixed and working
+
 03 - November - 2013
     Moved the work to new github
     Tested out OGER tests

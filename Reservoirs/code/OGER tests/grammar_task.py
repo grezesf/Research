@@ -4,11 +4,18 @@
 # the grammar itself.
 
 import os
+import sys
 import gzip
-import Oger
-
 import mdp
 import pylab
+
+# add OGER toolbox to the path
+# print sys.path
+# sys.path.append("/home/felix/Research/Reservoirs/libraries/benjamin_schrauwen-organic-reservoir-computing-engine-50cfe9216655/src")
+# print sys.path
+
+import Oger
+
 
 if __name__ == "__main__":
 

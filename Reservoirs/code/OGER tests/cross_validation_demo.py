@@ -1,4 +1,7 @@
 import mdp
+# add OGER toolbox to the path
+import sys
+sys.path.append("/home/felix/Research/Reservoirs/libraries/benjamin_schrauwen-organic-reservoir-computing-engine-50cfe9216655/src")
 import Oger
 
 if __name__ == "__main__":

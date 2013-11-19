@@ -2,17 +2,20 @@
 import os
 import sys
 
+# README
+# this script takes as input un-scaled MFCC files and rescales them given factors
+
 
 def main():
 
 	# path to MFCCs
-	MFCCPath = sys.argv[1]
+	MFCCPath =  os.path.abspath(os.path.normpath(sys.argv[1]))
 	# path to rescaling factors
-	factorsCSV = sys.argv[2]
+	factorsCSV =  os.path.abspath(os.path.normpath(sys.argv[2]))
 	# path to averages
-	averagesCSV =  sys.argv[3]
+	averagesCSV =   os.path.abspath(os.path.normpath(sys.argv[3]))
 	# path to save results
-	targetDir = sys.argv[4]
+	targetDir =  os.path.abspath(os.path.normpath(sys.argv[4]))
 
 	# extract factors
 	factors_file = open(factorsCSV)
@@ -40,10 +43,10 @@ def main():
 				print "from path : " + path
 
 				# create copy of MFCC directory structure
-				ind = path.split("/").index("mfccs")
+				ind = path.split("/").index(os.path.basename(MFCCPath))
 				newDir = "/".join(path.split('/')[ind+1:])
 				# print newDir
-				if not os.path.exists(targetDir + newDir):
+				if not os.path.exists(targetDir + "/" + newDir ):
 					# print "creating sub-directory"
 					os.makedirs(targetDir + "/" + newDir )
 

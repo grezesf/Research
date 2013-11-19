@@ -4,7 +4,7 @@ import sys
 import math
 
 # README
-# attempt to recreate table 1 from the paper
+# attempts to recreate table 1 from the paper
 # reads the TIMIT-mfcc dataset, performs statistical calculation
 
 
@@ -122,13 +122,13 @@ def main():
 
 
 	# save results to files
-	f = open(targetDir + "averages.csv", 'w')
+	f = open(targetDir + "/" + "averages.csv", 'w')
 	f.write( "log(E);de_log(E);dede_log(E);cepstrum;de_cepstrum;dede_cepstrum\n")
 	for a in averages:
 	  f.write("%s;" % a)
 	f.close()
 
-	f = open(targetDir + "alphas.csv", 'w')
+	f = open(targetDir + "/" + "alphas.csv", 'w')
 	f.write( "log(E);de_log(E);dede_log(E);cepstrum;de_cepstrum;dede_cepstrum\n")
 	for a in alphas:
 	  f.write("%s;" % a)

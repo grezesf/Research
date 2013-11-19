@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import os
 import sys
+import datetime
 
 # README
 # reads the TIMIT dataset, copies the directory structure
@@ -34,6 +35,13 @@ def main():
 	if not os.path.exists(targetDir):
 		print "Creating target directory"
 		os.makedirs(targetDir)
+	# create dataset description
+	if not os.path.exists(targetDir + "/" + "description.txt"):
+		f = open(targetDir + "/" + "description.txt", 'w')
+		f.write("This directory contains the mffc extractions from the audio files of the TIMIT dataset.\n")
+		f.write("This directory was created by /code/preprocessing/feat_extract.py on " + str(datetime.date.today()) + "\n")
+		f.close()
+
 
 	# walk the directories
 	for (path, dirs, files) in os.walk(TIMITPath):

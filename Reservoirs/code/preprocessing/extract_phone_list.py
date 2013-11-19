@@ -6,9 +6,9 @@ import sys
 def main():
 
 	# path to files to be processed
-	workdir = sys.argv[1]
+	workdir = os.path.abspath(os.path.normpath(sys.argv[1]))
 	# path where to save results
-	savedir = sys.argv[2]
+	savedir = os.path.abspath(os.path.normpath(sys.argv[2]))
 
 	# create save dirs
 	if not os.path.exists(savedir):

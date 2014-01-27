@@ -1,0 +1,37 @@
+OVERVIEW of 2nd Exam Work
+
+Requirements:
+    In order to complete the Second Exam successfully, the student, in consultation with his or her Second Examination (Advisory) Committee, should prepare a list of publications (books, or sections of books, relevant papers, journals, etc.) to be used as source material for a survey paper on the state of the area of research. The paper is not meant to be a research work but a detailed look at the state of the art and should demonstrate a thorough understanding of the important open problems, approaches and recent advances in the area. There must be at least ten research references (not textbooks) for this paper published in the past five years.
+
+    The student will prepare an original paper, usually 20-30 pages in length that needs to be given to the Examination Committee and the Executive Officer at least three weeks before the scheduled oral examination. The oral presentation is to be based on this document and reading list in the presence of the Examination Committee. This presentation will be held in public to which students and faculty will be invited (and may ask questions).
+
+    Recap:
+    10+ research papers from last 5 years
+    20-30 pages survey paper
+    Presentation (45min?)
+
+Research Tool:
+    Before advancing to Level 3 and to Candidacy, all students are required to show high-level programming proficiency. Students will satisfy this requirement by submitting to the Executive Officer a large computer program in a high-level programming language, written by themselves. Relevant documentation and comments must accompany the program.
+
+
+
+################################
+
+
+Subject: Reservoir Computing, Multi-task Learning
+
+Notes about each articles are saved in Zotero
+
+Reservoir Overview Articles:
+    2001: The "echo state" approach to analysing and training recurrent neural networks
+    2009: Survey: Reservoir Computing Approaches to Recurrent Neural Network Training
+
+History - Reccurent Neural Nets:
+
+Reservoir Theory and Applications:
+    2005: Isolated Word Recognition with the Liquid State Machine: A Case Study
+
+
+Multi-Task Learning Overview:
+    2008: A Unified Architecture for Natural Language Processing: Deep Neural Networks with Multitask Learning
+    2011: Natural Language Processing (Almost) from Scratch

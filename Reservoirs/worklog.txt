@@ -14,3 +14,17 @@
         connections to cats machines unstable
         feat_extract.py works
         rescalling.py works
+
+06 - January - 2014
+    Read Papers:
+        Machine learning and Multi-task Learning
+        2008: A Unified Architecture for Natural Language Processing: Deep Neural Networks with Multitask Learning
+        2011: Natural Language Processing (Almost) from Scratch
+
+        Reservoir Overview:
+        2001: The "echo state" approach to analysing and training recurrent neural networks
+        2009: Survey: Reservoir Computing Approaches to Recurrent Neural Network Training
+
+        Reservoir:
+        2005: Isolated Word Recognition with the Liquid State Machine: A Case Study
+

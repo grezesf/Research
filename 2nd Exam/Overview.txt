@@ -8,7 +8,7 @@ Requirements:
     Recap:
     10+ research papers from last 5 years
     20-30 pages survey paper
-    Presentation (45min?)
+    Presentation (45min + 15min q/a?)
 
 Research Tool:
     Before advancing to Level 3 and to Candidacy, all students are required to show high-level programming proficiency. Students will satisfy this requirement by submitting to the Executive Officer a large computer program in a high-level programming language, written by themselves. Relevant documentation and comments must accompany the program.
@@ -28,8 +28,14 @@ Reservoir Overview Articles:
 
 History - Reccurent Neural Nets:
 
-Reservoir Theory and Applications:
+Reservoir Theory:
+    Edge of Chaos Theory
+    2005: What Makes a dynamical system computationally powerful?
+    2004: Real-Time Computation at the Edge of Chaos in Recurrent Neural Networks
+
+Reservoir Applications:
     2005: Isolated Word Recognition with the Liquid State Machine: A Case Study
+
 
 
 Multi-Task Learning Overview:

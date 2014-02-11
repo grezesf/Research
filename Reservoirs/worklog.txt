@@ -35,6 +35,14 @@
         2004: Real-Time Computation at the Edge of Chaos in Recurrent Neural Networks
 
 29 - January - 2014
-    Created /Task_0_Replication/ and moved provious work in there
+    Created /Task_0_Replication/ and moved previous work in there
     Created /Task_1_Toy_Examples/
         sin waves of difference freq to be recreated with delay
+
+03 - February - 2014
+    Task1 finished.
+    Task2 started:
+        Phone recognition on TIMIT MFCCs
+
+10 - Feb - 2014
+    Conver_CSV2OGER.py finished and verified

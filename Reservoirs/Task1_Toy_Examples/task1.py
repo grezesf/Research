@@ -24,10 +24,15 @@ Oger.utils.make_inspectable(Oger.nodes.ReservoirNode)
 # so the rows represent timesteps and the columns represent different signals.
 
 # Get the dataset using task1_lib
-[x, y] = gen_toy_data(data_dim=500, set_size=200, freq_range=[1,10], phase_range=[0,9], amplitude_range=[1,10], delay=5.5)
+[x, y] = gen_toy_data(data_dim=500, set_size=200, freq_range=[10,100], phase_range=[0,9], amplitude_range=[1,10], delay=15.5)
 
 # print x,y
 print numpy.shape(x)
+# should be (set_size, data_dim, point_dim) (in this case point_dim=1)
+# print x[0][0:10]
+print numpy.shape(x[0]),numpy.shape(x[1]),numpy.shape(x[2]),numpy.shape(x[3]),numpy.shape(x[4])
+# print numpy.shape(y)
+
 
 # create MDP format input
 data = [None, zip(x[0:-2], y[0:-2])]

@@ -36,6 +36,11 @@ Reservoir Theory:
 Reservoir Applications:
     2005: Isolated Word Recognition with the Liquid State Machine: A Case Study
 
+Other Randomized Neural Networks:
+    Extreme Learning Machines:
+    2006: Extreme learning machine: Theory and applications
+    2011: Extreme learning machines: a survey
+
 
 
 Multi-Task Learning Overview:

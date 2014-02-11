@@ -6,7 +6,7 @@
 # uncomment desired steps
 
 
-# ### Step 1: Feature extraction
+### Step 1: Feature extraction
 # echo "Step 1: Feature extraction"
 # # path to TIMIT dataset
 # TIMITPath=/home/data/TIMIT/
@@ -15,7 +15,7 @@
 # # path to opensmile exectutable (no trailing /)
 # SMILExtractPath=/home/apps/opensmile-1.0.1/SMILExtract
 # # path to conf file
-# confPath=~/Research/Reservoirs/code/preprocessing/MFCC12_E_D_A.conf
+# confPath=~/Research/Reservoirs/Task0_Replication/code/preprocessing/MFCC12_E_D_A.conf
 # python feat_extract.py $TIMITPath $SMILExtractPath $confPath $MFCCPath
 
 

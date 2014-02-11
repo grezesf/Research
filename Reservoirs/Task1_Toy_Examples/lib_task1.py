@@ -42,15 +42,21 @@ def gen_toy_data(data_dim=500, set_size=100, freq_range=[20,40], phase_range=[20
         # amplitude1 = 10
 
 
-        # generate a signal of data_dim points
-        for i in range(data_dim):
+        # generate a signal of data_dim points, some longer than others
+        for i in range(data_dim+random.randint(-100, 100)):
             # generate data point
             point1 = amplitude1 * math.sin(2.0*math.pi*(i+phase1)/freq1)
             point2 = amplitude2 * math.sin(2.0*math.pi*(i+phase2)/freq2)
             
             # add to input_wave
+            input_wave.append(numpy.array([point1]))
+
             # input_wave.append([point1, point2])
-            input_wave.append([point1])
+            # test: make inputs different sizes
+            # if random.random()<0.5:
+            #     input_wave.append(numpy.array([point1]))
+            # else:
+            #      input_wave.append(numpy.array([point1, point1]))
 
             # generate target point delayed
             if i<delay:
@@ -62,10 +68,10 @@ def gen_toy_data(data_dim=500, set_size=100, freq_range=[20,40], phase_range=[20
             
             # add to target_wave
             # target_wave.append([target1, target2])
-            target_wave.append([target1])
+            target_wave.append(numpy.array([target1]))
 
         # add signals to data sets
-        input_set.append(input_wave)
-        target_set.append(target_wave)
+        input_set.append(numpy.array(input_wave))
+        target_set.append(numpy.array(target_wave))
 
     return numpy.array([input_set, target_set])

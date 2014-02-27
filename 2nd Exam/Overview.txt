@@ -27,6 +27,8 @@ Reservoir Overview Articles:
     2009: Survey: Reservoir Computing Approaches to Recurrent Neural Network Training
 
 History - Reccurent Neural Nets:
+    2002: A tutorial on training recurrent neural networks, covering BPTT, RTRL, EKF and ESN approach
+    1990 (Seminal): Backpropagation through time: what it does and how to do it
 
 Reservoir Theory:
     Edge of Chaos Theory
@@ -45,4 +47,4 @@ Other Randomized Neural Networks:
 
 Multi-Task Learning Overview:
     2008: A Unified Architecture for Natural Language Processing: Deep Neural Networks with Multitask Learning
-    2011: Natural Language Processing (Almost) from Scratch
+    2011: Natural Language Processing (Almost) from Scratch o

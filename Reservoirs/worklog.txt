@@ -45,4 +45,9 @@
         Phone recognition on TIMIT MFCCs
 
 10 - Feb - 2014
-    Conver_CSV2OGER.py finished and verified
+    Convert_CSV2OGER.py finished and verified
+
+20 - Feb - 2014
+    Task3 started:
+        Noisy SinC, based on 2006: Extreme learning machine: Theory and applications
+        

@@ -14,7 +14,6 @@ Research Tool:
     Before advancing to Level 3 and to Candidacy, all students are required to show high-level programming proficiency. Students will satisfy this requirement by submitting to the Executive Officer a large computer program in a high-level programming language, written by themselves. Relevant documentation and comments must accompany the program.
 
 
-
 ################################
 
 
@@ -22,29 +21,56 @@ Subject: Reservoir Computing, Multi-task Learning
 
 Notes about each articles are saved in Zotero
 
+Summary:
+My work for the second examination centers on Reservoir Computing, a novel approach to Neural Networks. Reservoir Computing has the potential to solve some of the chronic problems of traditional Neural Nets, most importantly training time. The reservoir computing paradigm is widely applicable, as this second examination paper will show with works from varied scientific fields, such as Natural Language Processing, Neuroscience and Machine Learning Theory.
+
+Current Schedule (as of 3/25):
+March 31 - 90% complete paper list.  April 15 - Complete Outline
+April 1st - Outline + structure
+May 15 - Complete Rough Draft
+June 15 - Complete First Draft
+before July 1st (depending on presentation schedule) - Complete Final Draft & Distribute Paper. (Three weeks before Presentation)
+before July 23 - Presentation.
+July 23 - Aug 3  - Travel to Colorado
+
+Current Paper List (as of 3/27):
 Reservoir Overview Articles:
-    2001: The "echo state" approach to analysing and training recurrent neural networks
-    2009: Survey: Reservoir Computing Approaches to Recurrent Neural Network Training
-
-History - Reccurent Neural Nets:
-    2002: A tutorial on training recurrent neural networks, covering BPTT, RTRL, EKF and ESN approach
-    1990 (Seminal): Backpropagation through time: what it does and how to do it
-
+2001: The "echo state" approach to analysing and training recurrent neural networks
+2009: Survey: Reservoir Computing Approaches to Recurrent Neural Network Training
+History - Recurrent Neural Nets:
+2002: A tutorial on training recurrent neural networks, covering BPTT, RTRL, EKF and ESN approach
+1990 (Seminal): Backpropagation through time: what it does and how to do it
 Reservoir Theory:
-    Edge of Chaos Theory
-    2005: What Makes a dynamical system computationally powerful?
-    2004: Real-Time Computation at the Edge of Chaos in Recurrent Neural Networks
-
+Edge of Chaos Theory:
+2005: What Makes a dynamical system computationally powerful?
+2004: Real-Time Computation at the Edge of Chaos in Recurrent Neural Networks
+Machine Learning related:
+2012: Multiobjective Reinforcement Learning Using Adaptive Dynamic Programming And Reservoir Computing
 Reservoir Applications:
-    2005: Isolated Word Recognition with the Liquid State Machine: A Case Study
-
+NLP related:
+2005: Isolated Word Recognition with the Liquid State Machine: A Case Study
+2010: Phoneme recognition with large hierarchical reservoirs (NIPS)
+2011: Connected digit recognition by means of reservoir computing (Interspeech)
+2012: On-Line Processing of Grammatical Structure Using Reservoir Computing
+Other applications:
+2011:   A reservoir of time constants for memory traces in cortical neurons (Nature)
+2012: Multiobjective Reinforcement Learning Using Adaptive Dynamic Programming And Reservoir Computing
+2014: Constructing optimized binary masks for reservoir computing with delay systems (Nature)
 Other Randomized Neural Networks:
-    Extreme Learning Machines:
-    2006: Extreme learning machine: Theory and applications
-    2011: Extreme learning machines: a survey
-
-
+Extreme Learning Machines:
+2006: Extreme learning machine: Theory and applications
+2011: Extreme learning machines: a survey
 
 Multi-Task Learning Overview:
-    2008: A Unified Architecture for Natural Language Processing: Deep Neural Networks with Multitask Learning
-    2011: Natural Language Processing (Almost) from Scratch o
+2008: A Unified Architecture for Natural Language Processing: Deep Neural Networks with Multitask Learning
+2011: Natural Language Processing (Almost) from Scratch
+
+
+Extra Material:
+Tutorial on training recurrent neural networks, covering BPPT, RTRL, EKF and the “echo state network” approach
+
+
+Tally (as of 3/27):
+Papers from the last 5 years (2009-2014): 10
+Papers from the 5 years before (2003-2008): 5
+Older: 2

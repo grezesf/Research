@@ -30,7 +30,7 @@ print "shape of dev first input:", numpy.shape(train_inputs[0])
 # construct individual nodes
 print "Constructing reservoir node and readout node"
 reservoir_size = 100
-reservoir = Oger.nodes.ReservoirNode(output_dim=reservoir_size)
+reservoir = Oger.nodes.ReservoirNode(output_dim=reservoir_size, input_scaling=0.1, spectral_radius=1.2)
 readout = Oger.nodes.RidgeRegressionNode()
 wtanode = Oger.nodes.WTANode()
 
@@ -51,7 +51,7 @@ gridsearch_parameters = {reservoir:{'input_scaling': mdp.numx.arange(0.1, 0.9, 0
 opt = Oger.evaluation.Optimizer(gridsearch_parameters, Oger.utils.nrmse)
 
 # Do the grid search
-opt.grid_search(data, flow, cross_validate_function=Oger.evaluation.n_fold_random, n_folds=5)
+# opt.grid_search(data, flow, cross_validate_function=Oger.evaluation.n_fold_random, n_folds=5)
 
 # The corresponding parameter values are, according to pre-run grid search:
 # ReservoirNode.input_scaling : 0.1
@@ -67,7 +67,7 @@ opt_flow = opt.get_optimal_flow(verbose=True)
 
 ## non grid search verion
 # train the flow 
-# flow.train(data)
+flow.train(data)
 
 # apply the trained flow to the training data and test data
 # trainout = flow(train_inputs[0])

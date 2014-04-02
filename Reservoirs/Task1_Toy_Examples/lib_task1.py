@@ -5,7 +5,7 @@ import numpy
 
 
 
-def gen_toy_data(data_dim=500, set_size=100, freq_range=[20,40], phase_range=[20,40], amplitude_range=[10,50], delay=5, noise=0.0):
+def gen_toy_data(data_dim=500, set_size=100, freq_range=[20,40], phase_range=[20,40], amplitude_range=[10,50], delay=5, input_noise=0.0, target_noise=0.0):
     # generates toy wavy data
     # data_dim is the number of points per wave 
     # set_size is the number of waves
@@ -46,10 +46,10 @@ def gen_toy_data(data_dim=500, set_size=100, freq_range=[20,40], phase_range=[20
         for i in range(data_dim+random.randint(-100, 100)):
             # generate data point
             # generate input noise
-            input_noise = noise * (2.0*random.random()-1.0)
+            noise = input_noise * (2.0*random.random()-1.0)
                 
-            point1 = input_noise + amplitude1 * math.sin(2.0*math.pi*(i+phase1)/freq1)
-            point2 = input_noise + amplitude2 * math.sin(2.0*math.pi*(i+phase2)/freq2)
+            point1 = noise + amplitude1 * math.sin(2.0*math.pi*(i+phase1)/freq1)
+            point2 = noise + amplitude2 * math.sin(2.0*math.pi*(i+phase2)/freq2)
             
             # add to input_wave
             input_wave.append(numpy.array([point1]))
@@ -67,9 +67,9 @@ def gen_toy_data(data_dim=500, set_size=100, freq_range=[20,40], phase_range=[20
                 target2 = 0
             else:
                 # generate target noise
-                target_noise = noise * (2.0*random.random()-1.0)
-                target1 = target_noise + amplitude1 * math.sin(2.0*math.pi*(i+phase1-delay)/freq1)
-                target2 = target_noise + amplitude2 * math.sin(2.0*math.pi*(i+phase2-delay)/freq2)
+                noise = target_noise * (2.0*random.random()-1.0)
+                target1 = noise + amplitude1 * math.sin(2.0*math.pi*(i+phase1-delay)/freq1)
+                target2 = noise + amplitude2 * math.sin(2.0*math.pi*(i+phase2-delay)/freq2)
             
             # add to target_wave
             # target_wave.append([target1, target2])

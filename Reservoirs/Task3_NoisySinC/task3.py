@@ -38,15 +38,15 @@ def main():
     flow.train(data)
 
     # run the reservoir on test data
-    print numpy.shape(flow(x[0]))
-    train_res = [flow(point) for point in x]
-    plot_train_res = [point[:][0] for point in train_res]
-    print numpy.shape(plot_train_res)
-    # test_res = [flow(i) for i in x[train_size+1:]]
-    # plot_test_res = [point[:][0] for point in test_res]
-    # print numpy.shape(test_res), numpy.shape(plot_test_res), numpy.shape(plot_x[train_size+1:])
-    # train_res = flow(x[0])
-    # test_res = flow(x[-1])
+    # print numpy.shape(flow(x[0]))
+    # train_res = [flow(point) for point in x]
+    # plot_train_res = [point[:][0] for point in train_res]
+    # print numpy.shape(plot_train_res)
+    test_res = [flow(i) for i in x[train_size+1:]]
+    plot_test_res = [point[:][0] for point in test_res]
+    print numpy.shape(test_res), numpy.shape(plot_test_res), numpy.shape(plot_x[train_size+1:])
+    train_res = flow(x[0])
+    test_res = flow(x[-1])
     # print test_res
     # print test_res[:10]
 
@@ -91,45 +91,45 @@ def gen_sinC_data(set_size=5000, noise=0.2, duplicate=1000):
     # generate set_size signals
     for nb in range(set_size):
 
-        # # commented code was for testing purposes
-        # input_signal = []
-        # target_signal = []
+        # commented code was for testing purposes
+        input_signal = []
+        target_signal = []
 
-        # for i in range(200):
-        #     input_point = 0.01*random.random() + 2.0*i/200.0 -1.0
+        for i in range(200):
+            input_point = 0.01*random.random() + 2.0*i/200.0 -1.0
 
-        #     # generate noisy target
-        #     target_noise = noise*random.random()
-        #     if input_point == 0.0:
-        #         target_point = 100.0 + target_noise
-        #     else:
-        #         target_point = 100.0*(math.sin(10.0*input_point)/(10.0*input_point) + target_noise)
+            # generate noisy target
+            target_noise = noise*random.random()
+            if input_point == 0.0:
+                target_point = 100.0 + target_noise
+            else:
+                target_point = 100.0*(math.sin(10.0*input_point)/(10.0*input_point) + target_noise)
 
-        #     input_signal.append(numpy.array([input_point]))
-        #     target_signal.append(numpy.array([target_point]))            
+            input_signal.append(numpy.array([input_point]))
+            target_signal.append(numpy.array([target_point]))            
 
-        # generate input
-        input_point = random.randint(-100.0,100.0)/100.0
-        # input_point = 2.0*random.random()-1.0
-        # generate noisy target
-        target_noise = noise*random.random()
-        if input_point == 0.0:
-            target_point = 1.0 + target_noise
-        else:
-            target_point = 1.0*(math.sin(10.0*input_point)/(10.0*input_point) + target_noise)
+        # # generate input
+        # input_point = random.randint(-100.0,100.0)/100.0
+        # # input_point = 2.0*random.random()-1.0
+        # # generate noisy target
+        # target_noise = noise*random.random()
+        # if input_point == 0.0:
+        #     target_point = 1.0 + target_noise
+        # else:
+        #     target_point = 1.0*(math.sin(10.0*input_point)/(10.0*input_point) + target_noise)
 
-        # # duplicate values (for testing purposes only)
-        # input_signal = numpy.array([numpy.array([input_point]) for x in range(110)])
-        # target_signal = numpy.array([[0] for x in range(10)] + [numpy.array([target_point]) for x in range(100)])
+        # # # duplicate values (for testing purposes only)
+        # # input_signal = numpy.array([numpy.array([input_point]) for x in range(110)])
+        # # target_signal = numpy.array([[0] for x in range(10)] + [numpy.array([target_point]) for x in range(100)])
 
-        input_signal = numpy.array([numpy.array([input_point])])
-        target_signal = numpy.array([numpy.array([target_point])])
+        # input_signal = numpy.array([numpy.array([input_point])])
+        # target_signal = numpy.array([numpy.array([target_point])])
 
-        # print target_signal
+        # # print target_signal
 
-        # add to datasets
-        input_set.append(numpy.array(input_signal))
-        target_set.append(numpy.array(target_signal))
+        # # add to datasets
+        # input_set.append(numpy.array(input_signal))
+        # target_set.append(numpy.array(target_signal))
 
     # print numpy.shape(input_set)
 

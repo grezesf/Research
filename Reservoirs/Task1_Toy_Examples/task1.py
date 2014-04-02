@@ -11,7 +11,7 @@ from lib_task1 import *
 
 ### Create reservoir
 # construct individual nodes, 
-reservoir_size = 100
+reservoir_size = 200
 reservoir = Oger.nodes.ReservoirNode(output_dim=reservoir_size, input_scaling=0.05)
 readout = Oger.nodes.RidgeRegressionNode()
 
@@ -25,14 +25,15 @@ Oger.utils.make_inspectable(Oger.nodes.ReservoirNode)
 # so the rows represent timesteps and the columns represent different signals.
 
 # Get the dataset using task1_lib
-data_dim=500
+data_dim=600
 set_size=200
-freq_range=[10,100]
-phase_range=[0,9]
-amplitude_range=[10,100]
-delay=15.5
-noise=5.0
-[x, y] = gen_toy_data(data_dim, set_size, freq_range, phase_range, amplitude_range, delay, noise)
+freq_range=[20,50]
+phase_range=[0,10]
+amplitude_range=[50,100]
+delay=95.5
+input_noise=0.0
+target_noise=0.0
+[x, y] = gen_toy_data(data_dim, set_size, freq_range, phase_range, amplitude_range, delay, input_noise, target_noise)
 
 # print x,y
 print numpy.shape(x)
@@ -54,8 +55,7 @@ trainout = flow(x[0])
 
 # gen test data
 set_size=2
-noise=0.0
-[x_test, y_test] = gen_toy_data(data_dim, set_size, freq_range, phase_range, amplitude_range, delay, noise)
+[x_test, y_test] = gen_toy_data(data_dim, set_size, freq_range, phase_range, amplitude_range, delay, input_noise, target_noise)
 print numpy.shape(x_test)
 # should be (set_size, data_dim, point_dim) (in this case point_dim=1)
 # print x[0][0:10]
@@ -73,11 +73,11 @@ ny = 1
 
 # plot a few input_scaling
 pylab.subplot(nx, ny, 1)
-pylab.plot(x[0])
+pylab.plot(x[0],'r')
 pylab.subplot(nx, ny, 1)
-pylab.plot(x[1])
+pylab.plot(x[1],'b')
 pylab.subplot(nx, ny, 1)
-pylab.plot(x[2])
+pylab.plot(x[2],'g')
 
 #plot the input and target
 pylab.subplot(nx, ny, 2)

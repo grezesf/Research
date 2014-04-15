@@ -81,7 +81,7 @@ def main():
     return None
 
 
-
+# data generating function
 def gen_sinC_data(set_size=5000, noise=0.2, duplicate=1000):
 
     # sets starts empty

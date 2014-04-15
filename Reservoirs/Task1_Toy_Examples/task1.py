@@ -21,16 +21,16 @@ Oger.utils.make_inspectable(Oger.nodes.ReservoirNode)
 
 ### Create/Load dataset
 # Both x and y are lists of 2D numpy arrays. 
-# Oger inherets the dimensionality convention from MDP, 
+# Oger inherits the dimensionality convention from MDP, 
 # so the rows represent timesteps and the columns represent different signals.
 
 # Get the dataset using task1_lib
 data_dim=600
 set_size=200
-freq_range=[20,50]
-phase_range=[0,10]
+freq_range=[300,900]
+phase_range=[0,900]
 amplitude_range=[50,100]
-delay=95.5
+delay=50
 input_noise=0.0
 target_noise=0.0
 [x, y] = gen_toy_data(data_dim, set_size, freq_range, phase_range, amplitude_range, delay, input_noise, target_noise)
@@ -71,7 +71,7 @@ print "NRMSE: " + str(Oger.utils.nrmse(y_test[0], testout1))
 nx = 5
 ny = 1
 
-# plot a few input_scaling
+# plot a few inputs
 pylab.subplot(nx, ny, 1)
 pylab.plot(x[0],'r')
 pylab.subplot(nx, ny, 1)

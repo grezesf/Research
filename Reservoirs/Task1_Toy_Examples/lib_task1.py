@@ -42,8 +42,8 @@ def gen_toy_data(data_dim=500, set_size=100, freq_range=[20,40], phase_range=[20
         # amplitude1 = 10
 
 
-        # generate a signal of data_dim points, some longer than others
-        for i in range(data_dim+random.randint(-100, 100)):
+        # generate a signal of data_dim points
+        for i in range(data_dim):
             # generate data point
             # generate input noise
             noise = input_noise * (2.0*random.random()-1.0)

@@ -43,7 +43,7 @@ NLP related:
 2011: Connected digit recognition by means of reservoir computing (Interspeech)
 2012: On-Line Processing of Grammatical Structure Using Reservoir Computing
 Other applications:
-2011:   A reservoir of time constants for memory traces in cortical neurons (Nature)
+2011: A reservoir of time constants for memory traces in cortical neurons (Nature)
 2012: Multiobjective Reinforcement Learning Using Adaptive Dynamic Programming And Reservoir Computing
 2014: Constructing optimized binary masks for reservoir computing with delay systems (Nature)
 Other Randomized Neural Networks:

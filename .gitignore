@@ -213,3 +213,10 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+*.aux
+*.nav
+*.out
+*.snm
+*.toc
+*.gz
+IGERT Spring 2014 Poster/speech lab logo wide.png

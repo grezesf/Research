@@ -1,5 +1,5 @@
 %%
-%% This is file `CUNY_PhD.cls',
+%% This is file `CUNY_CS_PhD.cls',
 %% created by manually modifying the file book.cls that comes
 %% with LaTeX.
 %%
@@ -90,7 +90,7 @@
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{CUNY_PhD}
+\ProvidesClass{CUNY_CS_PhD}
               [1999/01/07 v1.4a
  Standard LaTeX document class]
 
@@ -368,7 +368,7 @@ Date \> Executive Officer \\
 %  \vskip 20\p@
 
   \begin{center}%
-    Abstract
+%    Abstract
     \vskip 2em%
     {\large
      \lineskip .75em%

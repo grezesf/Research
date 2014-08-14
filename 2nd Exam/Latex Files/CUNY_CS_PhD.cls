@@ -19,7 +19,7 @@
 %%
 %% Your LaTeX dissertation file should start out like this:
 %%
-%% \documentclass[draft,12pt,oneside]{CUNY_PhD}
+%% \documentclass[draft,12pt,oneside]{CUNY_CS_PhD}
 %% ...
 %% \pagestyle{headings}
 %% \title{Dissertation title}

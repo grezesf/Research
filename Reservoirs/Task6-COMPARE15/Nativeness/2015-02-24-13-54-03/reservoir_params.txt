@@ -1,0 +1,3 @@
+reservoir_size: 100
+input_scaling: 1
+spectral_radius: 1.01

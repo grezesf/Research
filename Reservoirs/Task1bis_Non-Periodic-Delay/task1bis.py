@@ -13,8 +13,8 @@ def main():
 
     ### Create/Load dataset
     set_size=200
-    data_length=500
-    delay=100
+    data_length=100
+    delay=25
     [x, y] = gen_random_data(set_size, data_length, delay)
     # print x,y
     print numpy.shape(x)
@@ -29,7 +29,7 @@ def main():
 
     ### Create reservoir
     # construct individual nodes, 
-    reservoir_size = 200
+    reservoir_size = 500
     reservoir = Oger.nodes.ReservoirNode(output_dim=reservoir_size, input_scaling=0.05)
     readout = Oger.nodes.RidgeRegressionNode()
 
@@ -58,40 +58,42 @@ def main():
 
 
     # plot results
-    nx = 5
+    nx = 2
     ny = 1
 
     # plot a few inputs
     pylab.subplot(nx, ny, 1)
-    pylab.plot(x[0],'r')
-    pylab.subplot(nx, ny, 1)
-    pylab.plot(x[1],'b')
-    pylab.subplot(nx, ny, 1)
-    pylab.plot(x[2],'g')
+    pylab.plot(x[0],'r', label='input')
+    pylab.legend()
+    # pylab.subplot(nx, ny, 1)
+    # pylab.plot(x[1],'b')
+    # pylab.subplot(nx, ny, 1)
+    # pylab.plot(x[2],'g')
 
     #plot the input and target
-    pylab.subplot(nx, ny, 2)
-    pylab.plot(x[0],'r')
-    pylab.subplot(nx, ny, 2)
-    pylab.plot(y[0], 'b')
+    # pylab.subplot(nx, ny, 2)
+    # pylab.plot(x[0],'r')
+    # pylab.subplot(nx, ny, 2)
+    # pylab.plot(y[0], 'b')
 
     #plot the training output and target
-    pylab.subplot(nx, ny, 3)
-    pylab.plot(y[0],'b')
-    pylab.subplot(nx, ny, 3)
-    pylab.plot(trainout, 'g')
+    pylab.subplot(nx, ny, 2)
+    pylab.plot(y[0],'b', label='target')
+    pylab.subplot(nx, ny, 2)
+    pylab.plot(trainout, 'g', label='output')
+    pylab.legend()
 
     #plot the testing output and target
-    pylab.subplot(nx, ny, 4)
-    pylab.plot(y_test[0],'b')
-    pylab.subplot(nx, ny, 4)
-    pylab.plot(testout1, 'g')
+    # pylab.subplot(nx, ny, 4)
+    # pylab.plot(y_test[0],'b')
+    # pylab.subplot(nx, ny, 4)
+    # pylab.plot(testout1, 'g')
 
-    #plot the testing output and target
-    pylab.subplot(nx, ny, 5)
-    pylab.plot(y_test[1],'b')
-    pylab.subplot(nx, ny, 5)
-    pylab.plot(testout2, 'g')
+    # #plot the testing output and target
+    # pylab.subplot(nx, ny, 5)
+    # pylab.plot(y_test[1],'b')
+    # pylab.subplot(nx, ny, 5)
+    # pylab.plot(testout2, 'g')
 
     pylab.show()
 
@@ -114,7 +116,7 @@ def gen_random_data(set_size=100, data_length=500, delay=20):
     for nb in range(set_size):
 
         # waves start empty
-        input_wave = [numpy.array([2.0*random.random()-1.0]) for x in range(data_length)]
+        input_wave = [numpy.array([20.0*random.random()-10.0]) for x in range(data_length)]
         target_wave = [numpy.array([0]) for x in range(delay)]
         target_wave.extend(input_wave[:-delay])
 

@@ -1,0 +1,15 @@
+GOAL: apply reservoir computing techniques to COMPARE 2015 data
+
+Nativeness data:
+wav (single line vector)
+
+arff of:
+    ~6300 acoustic features, computed over whole file
+    vector of dim (1,~6300) per file.
+    no frame by frame feature?
+
+baseline:
+    Weka script
+    does it make sense to run the same script?
+
+

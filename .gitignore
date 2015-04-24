@@ -219,6 +219,8 @@ pip-log.txt
 *.snm
 *.toc
 *.gz
+
+#personals
 IGERT Spring 2014 Poster/speech lab logo wide.png
 IGERT Spring 2014 Poster/fig1-eps-converted-to.pdf
 IGERT Spring 2014 Poster/fig3-eps-converted-to.pdf
@@ -226,4 +228,7 @@ IGERT Spring 2014 Poster/fig3-eps-converted-to.pdf
 *.blg
 2nd Exam/Latex Files/Latex Files.zip
 2nd Exam/Latex Files/Latex Files.zip
-*.xml
+devdata/*
+opinionfinderv2.0/*
+Pickled Data/*
+OpFinder Results/*
